@@ -9,9 +9,9 @@ typedef MonthChangedCallback = void Function(DateTime month);
 ///
 /// Dates passed to and returned by this widget are normalized to local calendar
 /// dates (year, month, day); their time component is discarded.
-class SimpleCalendar extends StatefulWidget {
-  /// Creates a simple month calendar.
-  SimpleCalendar({
+class GenericCalendar extends StatefulWidget {
+  /// Creates a calendar.
+  GenericCalendar({
     super.key,
     this.onSelect,
     this.selectedDate,
@@ -152,10 +152,10 @@ class SimpleCalendar extends StatefulWidget {
   final List<String>? weekdayNames;
 
   @override
-  State<SimpleCalendar> createState() => _SimpleCalendarState();
+  State<GenericCalendar> createState() => _GenericCalendarState();
 }
 
-class _SimpleCalendarState extends State<SimpleCalendar> {
+class _GenericCalendarState extends State<GenericCalendar> {
   late DateTime _visibleMonth;
   DateTime? _selectedDate;
 
@@ -170,7 +170,7 @@ class _SimpleCalendarState extends State<SimpleCalendar> {
   }
 
   @override
-  void didUpdateWidget(SimpleCalendar oldWidget) {
+  void didUpdateWidget(GenericCalendar oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (!_sameNullableDate(widget.selectedDate, oldWidget.selectedDate)) {
       _selectedDate = _dateOnlyOrNull(widget.selectedDate);

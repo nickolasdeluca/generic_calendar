@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simple_calendar/simple_calendar.dart';
+import 'package:generic_calendar/generic_calendar.dart';
 
 void main() {
   Widget calendar({
@@ -11,7 +11,7 @@ void main() {
     DateTime? lastDate,
   }) => MaterialApp(
     home: Scaffold(
-      body: SimpleCalendar(
+      body: GenericCalendar(
         initialMonth: DateTime(2026, 6),
         onSelect: onSelect ?? (_) {},
         eventDates: eventDates,
@@ -38,7 +38,7 @@ void main() {
         localizationsDelegates: GlobalMaterialLocalizations.delegates,
         supportedLocales: const <Locale>[Locale('en'), Locale('pt', 'BR')],
         home: Scaffold(
-          body: SimpleCalendar(
+          body: GenericCalendar(
             initialMonth: DateTime(2026, 6),
             onSelect: (_) {},
           ),
@@ -46,7 +46,7 @@ void main() {
       ),
     );
 
-    final context = tester.element(find.byType(SimpleCalendar));
+    final context = tester.element(find.byType(GenericCalendar));
     final localizations = MaterialLocalizations.of(context);
     expect(
       find.text(localizations.formatMonthYear(DateTime(2026, 6))),
@@ -70,7 +70,7 @@ void main() {
   testWidgets('works without an onSelect callback', (tester) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: Scaffold(body: SimpleCalendar(initialMonth: DateTime(2026, 6))),
+        home: Scaffold(body: GenericCalendar(initialMonth: DateTime(2026, 6))),
       ),
     );
 
@@ -100,7 +100,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: SimpleCalendar(
+          body: GenericCalendar(
             initialMonth: DateTime(2026, 6),
             selectedDate: DateTime(2026, 6, 15),
             foregroundColor: normalColor,

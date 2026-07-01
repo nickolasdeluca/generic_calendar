@@ -1,4 +1,4 @@
-# simple_calendar
+# generic_calendar
 
 A small, modern Flutter month calendar with date selection and event indicators.
 It uses only Flutter's Material library and works on web, Android, iOS, Windows,
@@ -20,9 +20,9 @@ macOS, and Linux.
 ## Usage
 
 ```dart
-import 'package:simple_calendar/simple_calendar.dart';
+import 'package:generic_calendar/generic_calendar.dart';
 
-SimpleCalendar(
+GenericCalendar(
   selectedDate: selectedDate,
   eventDates: [
     DateTime(2026, 7, 4),
@@ -41,7 +41,7 @@ SimpleCalendar(
 callback:
 
 ```dart
-SimpleCalendar(
+GenericCalendar(
   eventDates: eventDates,
 )
 ```
@@ -51,7 +51,7 @@ calendar dates. For data backed by a service, an event can also be resolved
 dynamically:
 
 ```dart
-SimpleCalendar(
+GenericCalendar(
   onSelect: handleSelectedDate,
   hasEvent: (date) => eventDateKeys.contains(
     '${date.year}-${date.month}-${date.day}',

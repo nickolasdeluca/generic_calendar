@@ -1,7 +1,7 @@
-name: simple_calendar
+name: generic_calendar
 description: A modern, dependency-free Flutter month calendar with date selection and event indicators.
 version: 1.0.0
-homepage: https://github.com/nickolasdeluca/simple_calendar
+homepage: https://github.com/nickolasdeluca/generic_calendar
 
 environment:
   sdk: ^3.12.2

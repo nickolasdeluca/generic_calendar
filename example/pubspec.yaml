@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  simple_calendar:
+  generic_calendar:
     path: ../
 
 dev_dependencies:

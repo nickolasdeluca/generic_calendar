@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_calendar/simple_calendar.dart';
+import 'package:generic_calendar/generic_calendar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple Calendar Demo',
+      title: 'Generic Calendar Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Simple Calendar Demo'),
+      home: const MyHomePage(title: 'Generic Calendar Demo'),
     );
   }
 }
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(child: SimpleCalendar()),
+      body: Center(child: GenericCalendar()),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widget_previews.dart';
-import 'package:simple_calendar/simple_calendar.dart';
+import 'package:generic_calendar/generic_calendar.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 PreviewLocalizationsData ptBrLocalization() {
@@ -15,8 +15,8 @@ PreviewLocalizationsData ptBrLocalization() {
   );
 }
 
-@Preview(name: 'Simple Calendar', localizations: ptBrLocalization)
-Widget ptBrLocalized() => SimpleCalendar();
+@Preview(name: 'Generic Calendar (pt-BR)', localizations: ptBrLocalization)
+Widget ptBrLocalized() => GenericCalendar();
 
 PreviewLocalizationsData enUsLocalization() {
   return PreviewLocalizationsData(
@@ -30,5 +30,5 @@ PreviewLocalizationsData enUsLocalization() {
   );
 }
 
-@Preview(name: 'Simple Calendar', localizations: enUsLocalization)
-Widget enUsLocalized() => SimpleCalendar();
+@Preview(name: 'Generic Calendar (en-US)', localizations: enUsLocalization)
+Widget enUsLocalized() => GenericCalendar();
