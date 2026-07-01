@@ -1,4 +1,4 @@
-## 0.0.1
+# 1.0.0
 
 - Add date selection and month navigation.
 - Add event indicators through date collections or a predicate.
