@@ -1,6 +1,18 @@
+# Development folders
 build/
 .dart_tool/
 .idea/
 .vscode/
 
+# Preview files which are not used by the end user
 lib/preview.dart
+
+# Example files to shrink the package size
+example/android/
+example/ios/
+example/web/
+example/windows/
+example/macos/
+example/linux/
+example/.dart_tool/
+example/README.md
